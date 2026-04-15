@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 E-Commerce Analytics Dashboard
 
-## Getting Started
+> Dashboard de alta performance focado em Business Intelligence, utilizando as práticas mais modernas de Frontend Engineering. O projeto demonstra domínio em animações de interface, otimização de renderização e arquitetura escalável.
 
-First, run the development server:
+🔗 Acesse o projeto rodando ao vivo aqui (Link do Vercel)
 
-```bash
+✨ O que há de novo (Versão Pro)
+Micro-interações com Framer Motion: Transições suaves e efeitos de staggered reveal que elevam a percepção de qualidade do produto.
+
+Nested Layouts (Next.js 14+): Navegação instantânea sem re-renderização do Header e Sidebar, preservando o estado da aplicação.
+
+Hooks Customizados de Performance: - useDebounce: Otimização de busca em tempo real na lista de clientes.
+
+useMediaQuery: Inteligência responsiva para adaptar gráficos e legendas via JavaScript.
+
+Novas Camadas de Dados: Relatórios detalhados de tráfego (Doughnut Charts) e gestão de base de clientes com filtros assíncronos.
+
+🛠️ Tecnologias e Ferramentas
+Core: Next.js 14+ (App Router), TypeScript, React.
+
+Animações: Framer Motion.
+
+UI & UX: Tailwind CSS, shadcn/ui (Radix UI), Lucide Icons.
+
+Data Viz: Apache ECharts (Charts complexos e responsivos).
+
+Gerenciamento de Estado: Zustand (Filtros Globais).
+
+Otimização: TanStack Table, React Suspense & Skeletons.
+
+🏗️ Arquitetura Sênior (Deep Dive)
+O projeto aplica padrões de Engenharia de Software para garantir que a interface seja agnóstica à fonte de dados:
+
+Inversão de Dependência: A camada de componentes consome uma "Interface de Serviço". Substituir os dados mockados por uma API real (Axios/Fetch) exige alteração em apenas um arquivo de serviço.
+
+Performance de Busca: Implementação de busca com Debouncing para evitar re-renders excessivos e sobrecarga de chamadas assíncronas.
+
+Client-Side Reactivity vs Server-Side Hydration: Uso estratégico de Server Components para o esqueleto inicial e Client Components apenas onde a interatividade é necessária.
+
+UX de Carregamento: Orquestração de Suspense e Loading States personalizados para evitar o efeito de "página pulando" durante o carregamento de dados.
+
+🚀 Como rodar o projeto localmente
+
+1. Clone o repositório:
+
+git clone [https://github.com/SEU-USUARIO/ecommerce-analytics-portfolio.git](https://github.com/SEU-USUARIO/ecommerce-analytics-portfolio.git)
+
+2. Instale as dependências:
+
+npm install
+
+3. Inicie o servidor de desenvolvimento:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse http://localhost:3000 no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido com ☕ e dedicação por Gabriel Yamakishi.
