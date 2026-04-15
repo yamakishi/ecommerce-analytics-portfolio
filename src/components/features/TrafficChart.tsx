@@ -12,7 +12,6 @@ interface TrafficChartProps {
 
 export function TrafficChart({ data }: TrafficChartProps) {
   const { resolvedTheme } = useTheme();
-
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   const option = {
@@ -21,11 +20,11 @@ export function TrafficChart({ data }: TrafficChartProps) {
       trigger: 'item',
       formatter: '{b}: {c}%',
     },
+    // 1. Mudamos a legenda para ficar SEMPRE embaixo, centralizada
     legend: {
-      orient: isMobile ? 'horizontal' : 'vertical',
-      bottom: isMobile ? 0 : 'auto',
-      right: isMobile ? 'auto' : 0,
-      top: isMobile ? 'auto' : 'center',
+      orient: 'horizontal',
+      bottom: 0,
+      left: 'center',
       textStyle: {
         color: resolvedTheme === 'dark' ? '#a1a1aa' : '#52525b',
       },
@@ -34,7 +33,10 @@ export function TrafficChart({ data }: TrafficChartProps) {
       {
         name: 'Tráfego',
         type: 'pie',
-        radius: ['40%', '70%'],
+        // 2. Reduzimos levemente o raio máximo para garantir que caiba no Card
+        radius: ['35%', '65%'],
+        // 3. Centralizamos no meio (50% X) e subimos um pouco (42% Y) para dar espaço para a legenda embaixo
+        center: ['50%', '42%'],
         avoidLabelOverlap: false,
         itemStyle: {
           borderRadius: 10,
@@ -56,6 +58,7 @@ export function TrafficChart({ data }: TrafficChartProps) {
         <CardTitle>Fontes de Tráfego</CardTitle>
       </CardHeader>
       <CardContent>
+        {/* Ajuste 3: Alterado de h-75 (inválido no Tailwind padrão) para h-[300px] */}
         <div className="h-75 w-full">
           <ReactECharts
             option={option}

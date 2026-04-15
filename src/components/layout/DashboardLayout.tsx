@@ -9,11 +9,11 @@ interface DashboardLayoutProps {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className="bg-muted/40 flex min-h-screen">
+    <div className="bg-muted/40 flex min-h-screen transition-all duration-300">
       <Sidebar />
 
-      <div className="flex flex-1 flex-col">
-        <header className="bg-background flex h-14 items-center justify-between gap-4 border-b px-4 sm:justify-end lg:h-15 lg:px-6">
+      <div className="flex flex-1 flex-col overflow-hidden">
+        <header className="bg-background z-10 flex h-14 items-center justify-between gap-4 border-b px-4 sm:justify-end lg:h-15 lg:px-6">
           <MobileNav />
 
           <div className="flex items-center gap-4">
@@ -21,7 +21,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </header>
 
-        <main className="flex-1 p-4 lg:p-8">{children}</main>
+        <main className="flex-1 overflow-auto p-4 lg:p-8">{children}</main>
       </div>
     </div>
   );
