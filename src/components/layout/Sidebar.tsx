@@ -64,7 +64,7 @@ export function Sidebar() {
                 Gabriel Yamakishi
               </span>
               <span className="text-muted-foreground truncate text-[11px] leading-none">
-                Pleno Developer
+                Desenvolvedor Frontend
               </span>
             </div>
           </div>

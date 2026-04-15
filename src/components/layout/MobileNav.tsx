@@ -95,7 +95,7 @@ export function MobileNav() {
                     Gabriel Yamakishi
                   </span>
                   <span className="text-muted-foreground text-[10px] leading-none">
-                    Pleno Developer
+                    Desenvolvedor Frontend
                   </span>
                 </div>
               </div>

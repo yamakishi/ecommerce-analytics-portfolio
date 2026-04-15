@@ -2,7 +2,7 @@
 
 > Dashboard de alta performance focado em Business Intelligence, utilizando as práticas mais modernas de Frontend Engineering. O projeto demonstra domínio em animações de interface, otimização de renderização e arquitetura escalável.
 
-🔗 Acesse o projeto rodando ao vivo aqui (Link do Vercel)
+🔗 Acesse o projeto rodando ao vivo aqui [(Link do Vercel)](https://ecommerce-analytics-portfolio.vercel.app/)
 
 ✨ O que há de novo (Versão Pro)
 Micro-interações com Framer Motion: Transições suaves e efeitos de staggered reveal que elevam a percepção de qualidade do produto.
